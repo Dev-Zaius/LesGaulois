@@ -15,7 +15,7 @@ public class Gaulois {
 		return nom;
 	}
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(prendreParole() + " Â« " + texte + " Â»");
 	}
 	
 	private String prendreParole() {
@@ -23,7 +23,7 @@ public class Gaulois {
 	}
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom()); 
+		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
 		romain.recevoirCoup(force / 3);
 	}
 
@@ -37,6 +37,13 @@ public class Gaulois {
 
 	public int getEffetPotion() {
 		return effetPotion;
+	}
+
+	public void boirePotion(int forcePotion){
+		this.effetPotion = forcePotion;
+		String phrase = "Merci Druide, je sens que ma force est "
+				+ this.effetPotion + " fois dÃ©cuplÃ©e !";
+		this.parler(phrase);
 	}
 	
 	@Override
