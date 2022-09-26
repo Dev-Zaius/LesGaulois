@@ -12,17 +12,20 @@ public class Druide {
 		this.nom = nom;
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
-		parler("Bonjour, je suis le druide " + nom + " et ma potion peut aller d'une force " + effetPotionMin + " à " + effetPotionMax + ".");
+		parler("Bonjour, je suis le druide " + nom + 
+				" et ma potion peut aller d'une force " +
+				effetPotionMin + " à " + effetPotionMax + ".");
 	}
 	
 	public void preparerPotion(int effetPotionMax) {
 		Random random = new Random();
-		random.nextInt();
+		this.forcePotion = random.nextInt(effetPotionMax - this.effetPotionMin) + this.effetPotionMin;
 		if (forcePotion > 7) {
-			this.parler("J'ai préparé une super potion de force");
+			this.parler("J'ai préparé une super potion de force : " + this.forcePotion);
 		}
 		else {
-			this.parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force : " + this.forcePotion);
+			this.parler("Je n'ai pas trouvé tous les ingrédients,"
+					+"ma potion est seulement de force : " + this.forcePotion);
 		}
 	}
 	public String getNom() {
