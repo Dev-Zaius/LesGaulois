@@ -24,6 +24,7 @@ public class Test {
 		asterix.frapper(minus);
 		asterix.frapper(minus);
 		minus.parler("J'abandonne...");
+		minus.parler("Trop injuste !");
 	}
 
 }
