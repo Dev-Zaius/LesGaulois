@@ -4,6 +4,7 @@ import personnages.Chef;
 import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Romain;
+import personnages.Equipement;
 
 public class Test {
 	
@@ -41,6 +42,7 @@ public class Test {
 		asterix.frapper(minus);
 		minus.parler("J'abandonne...");
 		minus.parler("Trop injuste !");
+		System.out.println(Equipement.CASQUE);
 	}
 
 }
