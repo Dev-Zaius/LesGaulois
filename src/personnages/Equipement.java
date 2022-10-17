@@ -7,4 +7,8 @@ public enum Equipement {
 	private Equipement(String nom){
 		this.nom = nom;
 	}
+	
+	public String toString(){
+		return this.nom;
+	}
 }

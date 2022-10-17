@@ -28,6 +28,13 @@ public class Test {
 		village.afficherVillageois();
 		
 		System.out.println("--------------------------------------------");
+
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.BOUCLIER);
+		minus.sEquiper(Equipement.BOUCLIER);
+		
+		System.out.println("--------------------------------------------");
 		//Gaulois mongaulois = village.trouverHabitant(1);
 		// Le gaulois mongaulois existe déjà il s'agit de asterix !
 		
@@ -42,7 +49,6 @@ public class Test {
 		asterix.frapper(minus);
 		minus.parler("J'abandonne...");
 		minus.parler("Trop injuste !");
-		System.out.println(Equipement.CASQUE);
 	}
 
 }
