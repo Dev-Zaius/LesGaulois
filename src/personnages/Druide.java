@@ -2,14 +2,13 @@ package personnages;
 
 import java.util.Random;
 
-public class Druide {
-	private String nom;
+public class Druide extends Gaulois{
 	private int effetPotionMin;
 	private int effetPotionMax;
 	private int forcePotion = 1;
 	
 	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
-		this.nom = nom;
+		super(nom,0);
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
 		parler("Bonjour, je suis le druide " + nom + 
@@ -38,9 +37,7 @@ public class Druide {
 					+" ma potion est seulement de force : " + this.forcePotion);
 		}
 	}
-	public String getNom() {
-		return nom;
-	}
+	
 	public void parler(String texte) {
 		System.out.println(prendreParole() + " « " + texte +  " »");
 	}

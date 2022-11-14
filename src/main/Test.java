@@ -3,6 +3,7 @@ import Politique.Village;
 import personnages.Chef;
 import personnages.Druide;
 import personnages.Gaulois;
+import personnages.Personnages;
 import personnages.Romain;
 import personnages.Equipement;
 
@@ -10,14 +11,14 @@ public class Test {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Gaulois asterix = new Gaulois("Astérix",8);
+		Gaulois asterix = new Gaulois("Astérix",2);
 		Gaulois obélix = new Gaulois("Obélix",25);
-		Romain minus = new Romain("Minus",6);
+		Romain minus = new Romain("Minus",8);
 		Village village = new Village("Village des Irréductibles", 30);
 		Chef abraracourcix = new Chef("Abraracourcix",6,8,village);
 
 		
-		Gaulois gaulois = village.trouverHabitant(29);
+		Personnages gaulois = village.trouverHabitant(29);
 		// index out of bound car bornes dépassées
 		
 		Druide panoramix = new Druide("Panoramix",3,10);
@@ -47,8 +48,11 @@ public class Test {
 		minus.parler("UN GAU... UN GAUGAU...");
 		asterix.frapper(minus);
 		asterix.frapper(minus);
+		asterix.frapper(minus);
+		asterix.frapper(minus);
+		asterix.frapper(minus);
+		asterix.frapper(minus);
 		minus.parler("J'abandonne...");
 		minus.parler("Trop injuste !");
 	}
-
 }

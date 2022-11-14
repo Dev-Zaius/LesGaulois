@@ -3,25 +3,25 @@ package Politique;
 import java.util.Iterator;
 
 import personnages.Chef;
-import personnages.Gaulois;
+import personnages.Personnages;
 
 public class Village {
 	private String nom;
 	private Chef chef;
 	int nbVillageois = 0;
-	Gaulois[] villageois;
+	Personnages[] villageois;
 	
 	public Village(String nom, int nbVillageoisMaximum) {
-		this.villageois = new Gaulois[nbVillageoisMaximum];
+		this.villageois = new Personnages[nbVillageoisMaximum];
 		this.nom = nom;
 	}
 
-	public void ajouterHabitant(Gaulois gaulois) {
+	public void ajouterHabitant(Personnages gaulois) {
 		this.villageois[nbVillageois] = gaulois;
 		nbVillageois++;
 	}
 	
-	public Gaulois trouverHabitant(int numeroVillageois) {
+	public Personnages trouverHabitant(int numeroVillageois) {
 		return villageois[numeroVillageois];
 	}
 	
