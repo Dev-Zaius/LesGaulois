@@ -1,6 +1,6 @@
 package personnages;
 
-public class Romain {
+private class Romain {
 	private String nom;
 	private int force;
 	private Equipement[] equipements;
@@ -8,13 +8,21 @@ public class Romain {
 	private int pos = 0;
 	private boolean DejaVu = false;
 	
+	
 	public Romain(String nom, int force) {
 		assert (force > 0) : "la force ne doit pas être négative";
 		this.nom = nom;
 		this.force = force;
 		this.equipements = new Equipement[2];
 	}
-	public String getNom() {
+	enum Couleur{
+		ROUGE,VERT,BLEU;
+		private Couleur(){
+		}
+	}
+
+	public String getNom(Couleur couleur) {
+		couleur.equals(ROUGE);
 		return nom;
 	}
 	

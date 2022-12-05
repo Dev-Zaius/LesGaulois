@@ -12,6 +12,7 @@ public class Gaulois extends Personnages {
 		this.force = force;
 	}
 	
+
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
 		Equipement trophees2[] = romain.recevoirCoup((force / 3));
@@ -19,6 +20,8 @@ public class Gaulois extends Personnages {
 			this.trophees[nb_trophees] = trophees2[i];
 		}
 	}
+	
+	this.Instanceof(Personnages);
 
 //	public void frapper(Romain romain){
 //		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
